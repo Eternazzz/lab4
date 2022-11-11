@@ -17,9 +17,9 @@ def t_calories_calc():
     calories_calc.add_record(Record(amount=600, comment='Ужин.'))
     return calories_calc.get_calories_remained()
 
-def test_calories_calc(t_calories_calc):
+def test_calories_calc1(t_calories_calc):
     assert t_calories_calc == 'Сегодня можно съесть что-нибудь ещё, но с общей калорийностью не более 100 кКал'
-def test_calories_calc(t_calories_calc):
+def test_calories_calc2(t_calories_calc):
     assert t_calories_calc != 'Хватит есть!'
 
 @pytest.mark.parametrize("a, result", [(1000, 'Хватит есть!'),
